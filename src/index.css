@@ -1,0 +1,288 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Times New Roman', Times, serif;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+#root,
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(18, 18, 18);
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/142/751/831/landscape-anime-digital-art-fantasy-art-wallpaper-preview.jpg");
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  color: white;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  z-index: 10;
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid rgb(88, 87, 87);
+}
+
+.logo {
+  width: 300px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.logo h1 {
+  font-size: 3rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: rgb(162, 166, 169);
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(2px);
+  align-items: center;
+  z-index: 10;
+}
+
+.homepage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 80px 0 80px 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  /* border: 2px solid red; */
+}
+
+.home-bg {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/142/751/831/landscape-anime-digital-art-fantasy-art-wallpaper-preview.jpg");
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -10;
+  position: absolute;
+  filter: blur(2px);
+  top: 0;
+  right: 0;
+}
+
+
+.intro-section {
+  width: 800px;
+  color: white;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.intro-section h2 {
+  font-size: 3rem;
+}
+
+.intro-section p {
+  font-size: 1.5rem;
+}
+
+
+
+.search-space {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.search-space input[type="search"] {
+  width: 300px;
+  height: 60px;
+  padding: 10px;
+  font-size: large;
+  filter: brightness(0.7);
+  border: none;
+  outline: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.search-space button {
+  width: 100px;
+  height: 60px;
+  font-size: large;
+  border: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: rgb(145, 25, 25);
+  filter: brightness(0.8);
+
+}
+
+
+.popular-section {
+  font-size: large;
+  margin-top: 50px;
+  color: white;
+}
+
+.moviesField {
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  overflow-x: scroll;
+  background-color: rgb(51, 48, 48);
+  /* background-image: url('https://c4.wallpaperflare.com/wallpaper/883/1014/427/hexagon-colorful-pattern-gradient-wallpaper-preview.jpg'); */
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.movie-card {
+  width: 250px;
+  height: 350px;
+  overflow: hidden;
+  background-color: rgb(52, 84, 84);
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+.movie-card .title{
+  width: 100%;
+  height: 95px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+.movie-card img{
+  width: 100%;
+  height: 250px;
+}
+.title h1{
+  color: white;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 0.8em;
+}
+.title p{
+  color: white;
+}
+
+/* 
+.card{
+  width: 900px;
+  height: 500px;
+  background-color: rgba(106, 111, 119, 0.411);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  overflow: hidden;
+}
+.moviePoster{
+  width: 40%;
+  height: 100%;
+}
+.moviePoster img{
+  width: 100%;
+  height: 100%;
+}
+.movieInfo{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  padding: 20px;
+  color: white;
+}
+.movieInfo h1{
+  color: rgb(224, 219, 219);
+} */
+.card {
+  display: flex;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #b1aeae;
+}
+
+.moviePoster img {
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.movieInfo {
+  margin-left: 20px;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 8px;
+}
+
+h3 {
+  color: #555;
+  margin-bottom: 4px;
+}
+
+p {
+  color: #777;
+  line-height: 1.5;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .card {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .moviePoster img {
+      margin-bottom: 20px;
+  }
+}
