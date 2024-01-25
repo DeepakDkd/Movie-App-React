@@ -3,10 +3,10 @@ import { useParams , useNavigate} from 'react-router-dom'
 import useMovieData from '../Hooks/useMovieData';
 
 function MoviesField() {
-    const { param } = useParams();
-    const data = useMovieData({param});
+    const { title } = useParams();
+    const data = useMovieData({title});
+    console.log(data)
     let navigate = useNavigate();
-    // console.log(data && data.Search)
     return (
         <div className="moviesField">
             {

@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import useMovieData from '../Hooks/useMovieData'
 
 function Search() {
 
     const [value, setValue] = useState('')
     const navigate = useNavigate()
-    console.log(value)
     const handleSubmit = (e) => {
         e.preventDefault();
         navigate(`/search/${value}`)

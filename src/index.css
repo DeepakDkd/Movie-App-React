@@ -80,7 +80,7 @@ footer {
   align-items: center;
   z-index: 10;
   background-color: #343333;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .homepage {
@@ -231,34 +231,44 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 80px;
+  padding-top: 80px;
+  padding-bottom: 40px;
   background-size: cover;
   background-position: center;
-  
+  overflow: scroll;
+
 }
+
+
 
 .card .container {
   width: 100%;
   height: 100%;
-  box-shadow: 0 10px 20px rgba(23, 23, 23, 0.625);
   background-color: rgba(0, 0, 0, 0.415);
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   backdrop-filter: blur(50px);
-  padding-bottom: 80px;
+  /* padding-top: 80px; */
+  /* padding-bottom: 10px; */
   overflow: scroll;
-  
+  border: 2px solid red;
 }
 
-
+.movieCard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .moviePoster {
   width: 300px;
   margin-right: 20px;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
 }
 
@@ -274,46 +284,47 @@ footer {
 }
 
 .movieInfo {
-  max-width: 600px;
-  height: fit-content;
+  width: 600px;
+  height: 90%;
   padding: 20px;
   background-color: #3433336b;
   border-radius: 10px;
-
+  color: white;
+  overflow: scroll;
+  /* margin-top: 120px; */
 
 }
 
-h2 {
-  color: #e1dbdb;
-  margin-bottom: 8px;
-}
 
-h3 {
+.seasonBtn h3 {
   color: #aaa5a5;
   margin-bottom: 6px;
 }
 
-p {
+.movieInfo p {
   color: #aea6a6;
   line-height: 1.6;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+
+.seasonBtn button {
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  font-size: large;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  background-color: #343333;
+  color: #e1dbdb;
 }
 
-li {
-  margin-bottom: 4px;
-  display: flex;
-  align-items: center;
-  color: rgb(195, 193, 193);
-}
-
-li::before {
-  content: "•";
-  margin-right: 6px;
-  color: #555;
+.season {
+  width: 100%;
+  height: 100%;
+  color: white;
+  backdrop-filter: blur(200px);
+  /* background-color: red; */
 }
 
 @media (max-width: 768px) {
