@@ -9,10 +9,10 @@ function Card() {
     console.log(movie)
     const navigate = useNavigate()
     return movie ? (
-        <div className='card' style={{ backgroundImage: `url(${movie.Poster})` }} >
+        <div className='cardBg' style={{ backgroundImage: `url(${movie.Poster})` }} >
 
 
-            <div className="container" >
+            <div className="card" >
                 <div className='movieCard'>
 
 
@@ -48,7 +48,7 @@ function Card() {
                 {
                             movie?.totalSeasons &&
                             <div className='seasonBtn'>
-                                <h3>{movie.totalSeasons} seasons available</h3>
+                                <h3>{movie.totalSeasons} season available</h3>
 
                                 {
 
@@ -63,7 +63,7 @@ function Card() {
                         }
                 <Season />
             </div>
-        </div>
+        // </div>
     ) : null;
 }
 
