@@ -7,7 +7,7 @@ function Header() {
       
       <div className="logo" onClick={()=> navigate('/')}>
         <img src="https://icons4web.com/wp-content/uploads/2017/10/Movie-golden-icon-161909.jpg" alt="" />
-        <h1>CineStream</h1>
+        <h1>CineScore</h1>
       </div>
 
     </header>
