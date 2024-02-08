@@ -7,7 +7,7 @@ import Home from './Components/Home.jsx'
 import Search from './Components/Search.jsx'
 import MoviesField from './Components/MoviesField.jsx'
 import Card from './Components/Card.jsx'
-import Season from './Components/Season.jsx'
+import Episode from './Components/Episode.jsx'
 
 const router = createBrowserRouter([
   {
@@ -19,12 +19,16 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "/search/:title",
+        path: "/search/:title/page/:page",
         element: <MoviesField />
       },
       {
         path: "/movie/:movieID/:season?",
         element: <Card />
+      },
+      {
+        path: "/series/:movieID/season/:season/episode/:episode",
+        element: <Episode/>
       }
     ]
   }
