@@ -1,11 +1,13 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  transition: 0.5s;
 }
 
-html,body{
+html,
+body {
   width: 100%;
   height: 100%;
   font-family: 'Times New Roman', Times, serif;
@@ -17,14 +19,14 @@ html,body{
   display: none;
 }
 
-#root{  
+#root {
   width: 100%;
   height: 100%;
   padding: 80px 0 40px 0;
 
 }
 
-main{
+main {
   width: 100%;
   height: 100%;
   display: flex;
@@ -32,11 +34,6 @@ main{
   align-items: center;
   flex-direction: column;
   color: rgb(18, 18, 18);
-  /* background-image: url("https://c4.wallpaperflare.com/wallpaper/142/751/831/landscape-anime-digital-art-fantasy-art-wallpaper-preview.jpg"); */
-  background-color: rgb(51, 48, 48);
-  /* background-position: right;
-  background-size: cover;
-  background-repeat: no-repeat; */
 }
 
 header {
@@ -98,14 +95,13 @@ footer {
   justify-content: start;
   align-items: center;
   flex-direction: column;
+  background-color: #343333a0;
 }
 
 .home-bg {
   width: 100%;
-  height: 100%;
-  /* background-image: url("https://c4.wallpaperflare.com/wallpaper/142/751/831/landscape-anime-digital-art-fantasy-art-wallpaper-preview.jpg"); */
-  /* background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("https://c4.wallpaperflare.com/wallpaper/142/751/831/landscape-anime-digital-art-fantasy-art-wallpaper-preview.jpg"); */
-  color: white;
+  height: 100%;  color: white;
+  background-image: url('assets/CineScoreBg.jpg');
   background-position: right;
   background-size: cover;
   background-repeat: no-repeat;
@@ -122,6 +118,8 @@ footer {
   color: white;
   text-align: center;
   margin-top: 80px;
+  background-color: #34333362;
+  border-radius: 10px;
 }
 
 .intro-section h2 {
@@ -169,20 +167,11 @@ footer {
 }
 
 
-.popular-section {
-  font-size: large;
-  margin-top: 50px;
-}
 
-.popular-section h3 {
-  color: white;
-}
 
 .moviesField {
   width: 100%;
   height: 100%;
-  /* padding-top: 100px; */
-  /* padding-bottom: 100px; */
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -194,7 +183,44 @@ footer {
   background-position: right;
   background-size: cover;
   background-repeat: no-repeat;
-  
+
+}
+
+.fieldPageBtn {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  background-color: rgb(51, 48, 48);
+  color: white;
+
+}
+
+.pageBtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.pageBtns input {
+  width: 150px;
+  height: 40px;
+  background-color: rgb(88, 84, 84);
+  color: white;
+  outline: none;
+  border: none;
+
+  &:active {
+    background-color: red;
+  }
+
+  /* position: absolute; */
+  /* bottom: 50px; */
+  /* left: 45%; */
 }
 
 .movie-card {
@@ -204,6 +230,7 @@ footer {
   background-color: rgb(52, 84, 84);
   text-align: center;
   border-radius: 10px;
+  cursor: pointer;
   /* border: 1px solid white; */
 }
 
@@ -235,16 +262,16 @@ footer {
 
 
 
-.cardBg{
+.cardBg {
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
 }
 
-.card  {
+.card {
   width: 100%;
-  height:fit-content;
+  height: fit-content;
   background-color: rgba(0, 0, 0, 0.415);
   display: flex;
   justify-content: center;
@@ -255,7 +282,6 @@ footer {
   /* padding-bottom: 40px; */
   overflow: scroll;
   /* background-color: red; */
-  border: 2px solid red;
 }
 
 .movieCard {
@@ -264,11 +290,11 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  padding-bottom: 20px;
 }
 
 .moviePoster {
-  width: 300px;
+  width: 330px;
   margin-right: 20px;
   overflow: hidden;
   border-radius: 12px;
@@ -287,21 +313,23 @@ footer {
 }
 
 .movieInfo {
-  width: 600px;
+  width: 630px;
   height: 80%;
   padding: 20px;
+  margin-top: 20px;
   background-color: #3433336b;
   border-radius: 10px;
   color: white;
   overflow: scroll;
+  font-size: large;
   /* margin-top: 120px; */
 
 }
 
 
 .seasonBtn h3 {
-  color: #aaa5a5;
-  /* margin-bottom: 6px; */
+  color: white;
+  margin: 5px 0;
 }
 
 .movieInfo p {
@@ -309,12 +337,22 @@ footer {
   line-height: 1.6;
 }
 
-.seasonBtn{
+.seasonBtn {
   width: 100%;
+  height: 100%;
+  margin-bottom: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  flex-direction: column;
+  border: 1px solid white;
+  padding: 10px 0;
+}
+
+.seasonBtn h3{
+  color: black;
+  font-family: sans-serif;
 }
 
 
@@ -334,13 +372,85 @@ footer {
   width: 100%;
   height: 100%;
   color: white;
-  backdrop-filter: blur(200px);
+  backdrop-filter: blur(50px);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 20px;
+  padding: 40px 0;
 }
+
+.season h2 {
+  color: white;
+  margin-top: 20px;
+  border-bottom: 1px solid black;
+}
+
+.EpisodesList {
+  width: fit-content;
+  height: 100%;
+  /* padding: 20px; */
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+  /* border: 1px solid green; */
+}
+
+.EpisodesList h3 {
+  line-height: 2;
+  cursor: pointer;
+  font-family: sans-serif;
+
+}
+
+.episodeBg{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.episode{
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(100px);
+  color: white;
+  font-family: sans-serif;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; */
+  text-align: center;
+  padding: 20px 0;
+  overflow: scroll;
+}
+.episodeData{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 10px;
+}
+.episodeInfo{
+  width: 700px;
+  height: fit-content;
+  background-color: #34333353;
+  border-radius: 5px;
+  text-align: start;
+  padding: 0 20px;
+  /* border: 2px solid white; */
+}
+.episodeInfo p{
+  margin: 5px 0;
+  font-size: 1.2rem;
+}
+.episode img{
+  width: 350px;
+  border-radius: 5px;
+}
+
 /* 
 @media (max-width: 768px) {
   .container {
