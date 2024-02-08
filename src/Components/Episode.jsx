@@ -26,12 +26,20 @@ function Episode() {
                             data &&
                             Object.keys(data).map((key, index, obj) => (
 
-                                key != "Poster" && key != "Response" &&
+                                key != "Poster" && key != "Response" && key != "imdbID" && data[key] != "N/A" && key != "Ratings" &&
                                 <p key={index}>
 
                                     <strong>{`${key} : `}</strong>
                                     {`${data[key]}`}
 
+                                </p>
+                            ))
+                        }
+                        {
+
+                            data.Ratings.map((rating) => (
+                                <p>
+                                    <strong>{`Source: ${rating.Source}`}</strong>: {`${rating.Value}`}
                                 </p>
                             ))
                         }
