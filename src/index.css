@@ -425,6 +425,10 @@ footer {
   padding: 20px 0;
   overflow: scroll;
 }
+.episode h1{
+  text-shadow: 3px 3px 3px black;
+  margin: 5px 0;
+}
 .episodeData{
   width: 100%;
   height: 100%;
