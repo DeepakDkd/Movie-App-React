@@ -3,18 +3,18 @@ import { useParams, useNavigate } from 'react-router-dom'
 import useMovieData from '../Hooks/useMovieData';
 function Season() {
     // const [ run , setRun] = useState(null);
-    const { movieID, season , } = useParams();
+    const { movieID, season, } = useParams();
     console.log(season)
     const navigate = useNavigate()
     const data = useMovieData({ movieID, season })
     const Episodes = data?.Episodes
 
-    useEffect(()=>{
+    useEffect(() => {
         const elem = document.getElementById("episode");
-        if(elem){
-            elem.scrollIntoView({behavior: "smooth"});
+        if (elem) {
+            elem.scrollIntoView({ behavior: "smooth" });
         }
-    },[season])
+    }, [season])
 
     console.log(Episodes)
     console.log(data)
@@ -25,7 +25,14 @@ function Season() {
                     key === 'Title' || key === 'Season' ?
                         (
 
-                            <h1 key={key}><strong>{`${key} : `}</strong> {`${data[key]}`}</h1>
+                            <h1 key={key}>
+                                {
+                                    key == "Season" &&
+                                    <strong>{`${key} : `}</strong>
+                                }
+
+                                {`${data[key]}`}
+                            </h1>
 
                         )
                         :
@@ -39,7 +46,7 @@ function Season() {
 
                     data && Episodes.map((key, value) => (
 
-                        <h3  key={key} onClick={()=>navigate(`/series/${movieID}/season/${season}/episode/${value + 1}`)}>
+                        <h3 key={key} onClick={() => navigate(`/series/${movieID}/season/${season}/episode/${value + 1}`)}>
                             {value + 1}. {key.Title}
                         </h3>
                     ))
