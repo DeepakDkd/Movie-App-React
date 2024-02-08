@@ -7,7 +7,7 @@ function Search() {
     const navigate = useNavigate()
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigate(`/search/${value}`)
+        navigate(`/search/${value}/page/1`)
         setValue('')
     }
    
