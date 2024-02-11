@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 
-function Search() {
+function Search({ styles}) {
 
     const [value, setValue] = useState('')
     const navigate = useNavigate()
@@ -14,7 +14,8 @@ function Search() {
     
     return (
         <>
-        <form className="search-space"
+        <form className={styles}
+            // style={{display:hamburgerSearch? "flex": ""}}
             onSubmit={handleSubmit}>
             <input
                 required
@@ -23,7 +24,7 @@ function Search() {
                 placeholder='Search movies / series....'
                 onChange={(e) => setValue(e.target.value)}
             />
-            <button type="submit">Search</button>
+            <button type="submit">{styles=="searchNav" || "phoneNav" ?  '🔍' : 'Search'}</button>
         </form>
        
         </>
