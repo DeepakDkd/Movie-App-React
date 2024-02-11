@@ -10,7 +10,7 @@ function Episode() {
     // console.log(episodeData)
     // },[data])
     console.log(data)
-    console.log(episode)
+    console.log(episode)    
     return data ? (
         <div className="episodeBg" style={{ backgroundImage: `url(${data.Poster})` }}>
 

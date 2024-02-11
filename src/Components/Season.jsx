@@ -52,6 +52,9 @@ function Season() {
                     ))
                 }
             </div>
+            {
+                data.Error && console.log(data[Error])
+            }
         </div>
     ) : null
 }
