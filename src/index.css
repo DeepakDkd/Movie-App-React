@@ -55,6 +55,7 @@ header {
 
 header i {
   display: none;
+  font-size: 2rem;
 }
 
 header nav {
@@ -93,14 +94,12 @@ footer {
   align-items: center;
   z-index: 10;
   background-color: #343333;
-  /* border: 2px solid red; */
 }
 
 .homepage {
   width: 100%;
   height: 100%;
   position: relative;
-  /* padding: 80px 0 80px 0; */
   display: flex;
   justify-content: start;
   align-items: center;
@@ -376,10 +375,7 @@ footer {
   align-items: center;
   flex-direction: column;
   backdrop-filter: blur(50px);
-  /* padding-top: 80px; */
-  /* padding-bottom: 40px; */
   overflow: scroll;
-  /* background-color: red; */
 }
 
 .movieCard {
@@ -516,10 +512,6 @@ footer {
   backdrop-filter: blur(100px);
   color: white;
   font-family: sans-serif;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; */
   text-align: center;
   padding: 20px 0;
   overflow: scroll;
@@ -534,7 +526,6 @@ footer {
   width: 100%;
   height: 100%;
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   gap: 10px;
 }
@@ -565,6 +556,40 @@ footer {
     display: none;
   }
 
+  .logo img{
+    width: 40px;
+    height: 40px;
+  }
+  .logo h1{
+    font-size: 2rem;
+  }
+  .intro-section{
+    width: 98%;
+  }
+  .intro-section h2{
+    font-size: 1.5rem;
+  }
+  .intro-section p{
+    font-size: 1rem;
+  }
+
+
+  .PopularP{
+    font-size: 1.5rem;
+  }
+  .popularpicks button{
+    font-size: 0.8rem;
+  }
+
+  .search-space input[type="search"]{
+    width: 150px;
+    height: 40px;
+    font-size: .7rem;
+  }
+  .search-space button{
+    width: 50px;
+    height: 40px;
+  }
   .phoneNav {
     width: 100%;
     height: fit-content;
@@ -579,6 +604,8 @@ footer {
     align-items: center;
     animation: phone 0.5s ease-in forwards;
   }
+
+
   @keyframes phone {
     from{
       top:  50px;
@@ -594,8 +621,27 @@ footer {
     display: block;
   }
 
+  .movieCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
   .moviePoster {
+    width: 200px;
     margin-right: 0;
-    margin-bottom: 20px;
+  }
+  .movieInfo{
+    width: 95%;
+    margin-top: 0;
+    font-size: small;
+  }
+
+  .episode{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   }
 }

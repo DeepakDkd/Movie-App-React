@@ -24,7 +24,7 @@ function Search({ styles}) {
                 placeholder='Search movies / series....'
                 onChange={(e) => setValue(e.target.value)}
             />
-            <button type="submit">{styles=="searchNav" || "phoneNav" ?  '🔍' : 'Search'}</button>
+            <button type="submit">🔍</button>
         </form>
        
         </>

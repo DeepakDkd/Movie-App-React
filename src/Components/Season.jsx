@@ -40,7 +40,7 @@ function Season() {
 
                 ))
             }
-            <h2 id="episode">Episodes</h2>
+            <h2>Episodes</h2>
             <div className="EpisodesList" >
                 {
 
