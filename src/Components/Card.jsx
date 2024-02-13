@@ -21,7 +21,7 @@ function Card() {
                     </div>
                     <div className="movieInfo" >
 
-                        <h2>{movie.Title} </h2>
+                        <h2 style={{textAlign:'center'}}>{movie.Title} </h2>
                         {
                             movie && Object.keys(movie).map((key, index) => (
                                 key === 'Poster' || movie[key] == 'N/A' || key === 'Title' || key === 'Ratings' || key === 'Response' || key === 'imdbID' ? (

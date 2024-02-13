@@ -24,6 +24,7 @@ function MoviesField() {
     return (
         <>
             <div className="moviesField">
+                <p>dat</p>
                 {
                     data && data?.Search?.map((movie) => (
                         <div key={movie.imdbID} className='movie-card' onClick={() => navigate(`/movie/${movie.imdbID}`)}>
