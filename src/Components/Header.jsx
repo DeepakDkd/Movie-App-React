@@ -1,10 +1,14 @@
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { useNavigate , useLocation} from 'react-router-dom'
 import Search from './Search';
 function Header() {
   const navigate = useNavigate();
   const [menu, setMenu] = useState(false)
-  console.log(menu)
+  console.log()
+  const location = useLocation()
+  useEffect(()=>{
+    setMenu(false)
+  },[location])
   return (
     <>
       <header onClick={() => (menu && setMenu(false))}>

@@ -272,18 +272,17 @@ footer {
   justify-content: start;
   align-items: center;
   flex-direction: column;
-  /* border: 2px solid red; */
   padding: 10px;
   background-color: rgb(51, 48, 48);
   overflow-y: scroll;
 }
-.showingRes{
+.showingRes {
   text-align: center;
   padding: 10px;
   color: rgb(199, 182, 182);
 }
 
-.movieResults{
+.movieResults {
   width: 100%;
   height: 100%;
   display: flex;
@@ -292,7 +291,6 @@ footer {
   flex-wrap: wrap;
   gap: 20px;
   /* overflow-x: scroll; */
-  
 }
 
 .fieldPageBtn {
@@ -654,16 +652,16 @@ footer {
     height: fit-content;
   }
 
-  .movie-card{
+  .movie-card {
     width: 45%;
     height: fit-content;
   }
-  .movie-card img{
+  .movie-card img {
     width: 100%;
     height: 150px;
   }
-  .movie-card .title{
+  .movie-card .title {
     height: 65px;
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
