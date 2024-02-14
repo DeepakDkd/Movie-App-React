@@ -1,25 +1,23 @@
-import React, { useEffect} from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useParams, useNavigate , useLocation } from "react-router-dom";
 import useMovieData from "../Hooks/useMovieData";
 function Season() {
   // const [ run , setRun] = useState(null);
   const { movieID, season } = useParams();
-  console.log(season);
   const navigate = useNavigate();
   const data = useMovieData({ movieID, season });
   const Episodes = data?.Episodes;
+  const location = useLocation()
 
   useEffect(() => {
     const elem = document.getElementById("episode");
     if (elem) {
       elem.scrollIntoView({ behavior: "smooth" });
     }
-  }, [season]);
+  }, [location]);
 
-  console.log(Episodes);
-  console.log(data);
   return data?.Episodes ? (
-    <div className="season">
+    <div className="season"  id="episode">
       {data &&
         Object.keys(data).map((key) =>
           key === "Title" || key === "Season" ? (

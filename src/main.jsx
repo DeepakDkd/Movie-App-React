@@ -1,45 +1,42 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import Home from './Components/Home.jsx'
-import Search from './Components/Search.jsx'
-import MoviesField from './Components/MoviesField.jsx'
-import Card from './Components/Card.jsx'
-import Episode from './Components/Episode.jsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import "./index.css";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Home from "./Components/Home.jsx";
+import MoviesField from "./Components/MoviesField.jsx";
+import Card from "./Components/Card.jsx";
+import Episode from "./Components/Episode.jsx";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <App />,
     children: [
       {
         path: "/",
-        element: <Home />
+        element: <Home />,
       },
       {
         path: "/search/:title/page/:page",
-        element: <MoviesField />
+        element: <MoviesField />,
       },
       {
         path: "/movie/:movieID/:season?",
-        element: <Card />
+        element: <Card />,
       },
       {
         path: "/series/:movieID/season/:season/episode/:episode",
-        element: <Episode/>
-      }
-    ]
-  }
-])
+        element: <Episode />,
+      },
+    ],
+  },
+]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} >
-
+    <RouterProvider router={router}>
       <App />
-
     </RouterProvider>
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);
