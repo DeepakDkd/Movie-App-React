@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import useMovieData from '../Hooks/useMovieData';
 
@@ -7,7 +6,8 @@ function MoviesField() {
     const data = useMovieData({ title, page });
     console.log(data)
     let navigate = useNavigate();
-
+    console.log(typeof data)
+    console.log(data?.Search[0].Title)
 
     const handlePrevBtn = () => {
         if (page > 0) {
@@ -26,7 +26,7 @@ function MoviesField() {
             <div className="moviesField">
                 
             <p className='showingRes'>
-  {data?.totalResults ? `We've found ${data.totalResults} results!` : `No results found. 😕`}
+  {data?.totalResults ? `We've found ${data?.totalResults} results for "${data?.Search[0].Title}"` : `No results found. 😕`}
 </p>
                 <div className="movieResults">
                 {
