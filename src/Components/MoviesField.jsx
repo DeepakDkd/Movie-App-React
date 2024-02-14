@@ -5,7 +5,7 @@ import useMovieData from '../Hooks/useMovieData';
 function MoviesField() {
     const { title, page } = useParams();
     const data = useMovieData({ title, page });
-    console.log(data?.totalResults / 10)
+    console.log(data)
     let navigate = useNavigate();
 
 
@@ -24,7 +24,11 @@ function MoviesField() {
     return (
         <>
             <div className="moviesField">
-                <p>dat</p>
+                
+            <p className='showingRes'>
+  {data?.totalResults ? `We've found ${data.totalResults} results!` : `No results found. 😕`}
+</p>
+                <div className="movieResults">
                 {
                     data && data?.Search?.map((movie) => (
                         <div key={movie.imdbID} className='movie-card' onClick={() => navigate(`/movie/${movie.imdbID}`)}>
@@ -40,7 +44,7 @@ function MoviesField() {
 
                 }
                 {
-                    data &&
+                    data && data.totalResults !== undefined ?
 
                     <div className="fieldPageBtn">
                         <p>Page - {page} / {Math.ceil(data?.totalResults / 10)}</p>
@@ -48,8 +52,9 @@ function MoviesField() {
                             <input type="button" value="Previous" onClick={handlePrevBtn} disabled={page == 1 && true} />
                             <input type="button" value="Next" onClick={handleNextBtn} disabled={page >= data.totalResults / 10 && true} />
                         </div>
-                    </div>
+                    </div> : null
                 }
+                </div>
             </div>
 
         </>
