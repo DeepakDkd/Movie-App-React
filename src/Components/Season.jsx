@@ -2,10 +2,11 @@ import React, { useEffect } from "react";
 import { useParams, useNavigate , useLocation } from "react-router-dom";
 import useMovieData from "../Hooks/useMovieData";
 function Season() {
-  // const [ run , setRun] = useState(null);
   const { movieID, season } = useParams();
+  // console.log(season)
   const navigate = useNavigate();
   const data = useMovieData({ movieID, season });
+  console.log(data)
   const Episodes = data?.Episodes;
   const location = useLocation()
 

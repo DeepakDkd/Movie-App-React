@@ -2,10 +2,12 @@ import { useEffect } from "react";
 import { useParams, useNavigate , useLocation} from "react-router-dom";
 import useMovieData from "../Hooks/useMovieData";
 import NotFound from "./NotFound";
+import Loader from "./Loader";
 
 function MoviesField() {
   const { title, page } = useParams();
   const data = useMovieData({ title, page });
+  console.log(data)
   let navigate = useNavigate();
   const location = useLocation()
 
@@ -26,6 +28,9 @@ function MoviesField() {
       elem.scrollIntoView({ behavior: "smooth" });
     }
   }, [location]);
+  if(data == null){
+    return <Loader/>
+  }
   return (
     <>
       <div className="moviesField">

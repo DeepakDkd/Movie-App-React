@@ -2,6 +2,7 @@ import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import useMovieData from "../Hooks/useMovieData";
 import Season from "./Season";
+import Loader from "./Loader";
 
 function Card() {
   const { movieID } = useParams();
@@ -65,7 +66,7 @@ function Card() {
       </div>
       //{" "}
     </div>
-  ) : null;
+  ) : <Loader/>;
 }
 
 export default Card;
