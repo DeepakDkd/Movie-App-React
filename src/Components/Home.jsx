@@ -25,8 +25,8 @@ function Home() {
         <Link to={"/search/Game of Thrones/page/1"}>
           <button>Game of Thrones</button>
         </Link>
-        <Link to={"/search/Naruto/page/1"}>
-          <button>Naruto</button>
+        <Link to={"/search/Anime/page/1"}>
+          <button>Anime</button>
         </Link>
         <Link to={"/search/Doctor Who/page/1"}>
           <button>Doctor Who</button>

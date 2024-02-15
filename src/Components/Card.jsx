@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import useMovieData from "../Hooks/useMovieData";
 import Season from "./Season";
 import Loader from "./Loader";
+import {motion} from "framer-motion";
 
 function Card() {
   const { movieID } = useParams();
@@ -53,19 +54,22 @@ function Card() {
             <h3>{movie.totalSeasons} season available</h3>
             <div>
               {Array.from({ length: movie.totalSeasons }).map((_, i) => (
-                <button
-                  onClick={() => navigate(`/movie/${movie.imdbID}/${i + 1}`)}
+                <motion.button
+                initial={{opacity:0}}
+                whileInView={ { opacity: 1 } }
+                viewport={{once:true}}
+                transition={{duration:.2, ease:"easeInOut", delay:i*0.1}}
+                  onClick={() => navigate(`/movie/${movie.imdbID}/season/${i + 1}`)}
                   key={i + 1}
                 >
                   {i + 1}
-                </button>
+                </motion.button>
               ))}
             </div>
           </div>
         )}
         <Season />
       </div>
-      //{" "}
     </div>
   ) : <Loader/>;
 }

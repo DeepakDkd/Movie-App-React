@@ -12,18 +12,22 @@ function Search({ styles }) {
 
   return (
     <>
-      <form
-        className={styles}
-        onSubmit={handleSubmit}
-      >
-        <input
-          required
-          value={value}
-          type="search"
-          placeholder="Search movies / series...."
-          onChange={(e) => setValue(e.target.value)}
-        />
-        <button type="submit">🔍</button>
+      <form className={styles} onSubmit={handleSubmit}>
+        <div>
+          <input
+            required
+            value={value}
+            type="search"
+            placeholder="Search movies / series...."
+            onChange={(e) => setValue(e.target.value)}
+          />
+          <button type="submit">🔍</button>
+        </div>
+        {styles == "phoneNav" && (
+          <button onClick={() => navigate("/")} id="nav-home">
+            Home
+          </button>
+        )}
       </form>
     </>
   );

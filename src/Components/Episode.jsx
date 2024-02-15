@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import useMovieData from "../Hooks/useMovieData";
 import NotFound from "./NotFound";
+import Loader from "./Loader";
 function Episode() {
   const { movieID, episode } = useParams();
   const data = useMovieData({ movieID, episode });
@@ -43,7 +43,7 @@ function Episode() {
         </div>
       </div>
     </div>
-  ) : <NotFound/>;
+  ) : <Loader/>;
 }
 
 export default Episode;

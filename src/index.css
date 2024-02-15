@@ -22,7 +22,7 @@ body {
 #root {
   width: 100%;
   height: 100%;
-  padding: 80px 0 40px 0;
+  padding: 80px 0 70px 0;
 }
 
 main {
@@ -210,6 +210,11 @@ color: rgb(140, 139, 139);
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+}
+.search-space div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .search-space input[type="search"] {
@@ -473,7 +478,7 @@ color: rgb(140, 139, 139);
 .seasonBtn {
   width: 100%;
   height: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -489,10 +494,10 @@ color: rgb(140, 139, 139);
   font-family: sans-serif;
 }
 
-.seasonBtn button {
-  margin-left: 10px;
+.seasonBtn div button {
   width: 30px;
   height: 30px;
+  margin: 5px;
   font-size: large;
   font-weight: bold;
   border: none;
@@ -526,6 +531,7 @@ color: rgb(140, 139, 139);
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding-bottom: 30px;
 }
 
 .EpisodesList h3 {
@@ -693,16 +699,17 @@ color: rgb(140, 139, 139);
   }
   .phoneNav {
     width: 100%;
-    height: fit-content;
-    position: absolute;
+    height: 100%;
+    position: fixed;
     z-index: 10;
     top: 80px;
     right: 0;
     padding: 20px;
     background-color: rgba(49, 48, 58, 0.592);
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+    flex-direction: column;
     animation: phone 0.5s ease-in forwards;
   }
 
@@ -718,6 +725,12 @@ color: rgb(140, 139, 139);
   }
   header i {
     display: block;
+  }
+  #nav-home{
+    width: 100px;
+    border-radius: 10px;
+    margin: 10px;
+    border: 1px solid;
   }
 
   .movieCard {

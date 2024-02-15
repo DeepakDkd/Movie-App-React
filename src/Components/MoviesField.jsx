@@ -1,15 +1,14 @@
 import { useEffect } from "react";
-import { useParams, useNavigate , useLocation} from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import useMovieData from "../Hooks/useMovieData";
 import NotFound from "./NotFound";
 import Loader from "./Loader";
 
 function MoviesField() {
   const { title, page } = useParams();
-  console.log(title)
   const data = useMovieData({ title, page });
   let navigate = useNavigate();
-  const location = useLocation()
+  const location = useLocation();
 
   const handlePrevBtn = () => {
     if (page > 0) {
@@ -28,16 +27,18 @@ function MoviesField() {
       elem.scrollIntoView({ behavior: "smooth" });
     }
   }, [location]);
-  if(data == null){
-    return <Loader/>
+  if (data == null) {
+    return <Loader />;
   }
   return (
     <>
       <div className="moviesField">
         <p className="showingRes" id="focus">
-          {data?.totalResults
-            ? `We've found ${data?.totalResults} results for "${title}"`
-            : <NotFound title={title}/>}
+          {data?.totalResults ? (
+            `We've found ${data?.totalResults} results for "${title}"`
+          ) : (
+            <NotFound title={title} />
+          )}
         </p>
         <div className="movieResults">
           {data &&
