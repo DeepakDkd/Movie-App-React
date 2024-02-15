@@ -49,7 +49,7 @@ function Season() {
       </div>
       {data.Error && console.log(data[Error])}
     </div>
-  ) : <NotFound/>;
+  ) :null;
 }
 
 export default Season;

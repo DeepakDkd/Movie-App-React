@@ -8,6 +8,7 @@ function Card() {
   const { movieID } = useParams();
   const movie = useMovieData({ movieID });
   const navigate = useNavigate();
+  
   return movie ? (
     <div className="cardBg" style={{ backgroundImage: `url(${movie.Poster})` }}>
       <div className="card">
