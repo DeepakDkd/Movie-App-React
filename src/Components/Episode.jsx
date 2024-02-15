@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import useMovieData from "../Hooks/useMovieData";
+import NotFound from "./NotFound";
 function Episode() {
   const { movieID, episode } = useParams();
-  const [episodeData, setEpisodeData] = useState();
   const data = useMovieData({ movieID, episode });
-  // useEffect(()=>{
-  // if(data)setEpisodeData(data)
-  // console.log(episodeData)
-  // },[data])
-  console.log(data);
-  console.log(episode);
+  console.log(data)
+  console.log("hello")
   return data ? (
     <div
       className="episodeBg"
@@ -47,7 +43,7 @@ function Episode() {
         </div>
       </div>
     </div>
-  ) : null;
+  ) : <NotFound/>;
 }
 
 export default Episode;

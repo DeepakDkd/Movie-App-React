@@ -550,11 +550,12 @@ footer {
 .NotFound{
   width: 80vw;
   height: 400px;
-  /* background-color: #3a0c0c; */
-  /* border: 2px solid white; */
+  display: flex;
+  justify-content: center;
 }
 .NotFound h1{
   animation: notFound 5s infinite;
+  font-size: 1.5em;
 }
 @keyframes notFound {
   0%{
@@ -707,6 +708,9 @@ footer {
   .episodeInfo {
     width: 100%;
     height: fit-content;
+  }
+  .episodeInfo p{
+    font-size: medium;
   }
 
   .movie-card {

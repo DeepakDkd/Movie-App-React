@@ -30,6 +30,7 @@ function Header() {
       {menu && (
         <nav>
           <Search styles={"phoneNav"} />
+          {/* <button>Home</button> */}
         </nav>
       )}
     </>

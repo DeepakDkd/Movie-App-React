@@ -1,13 +1,15 @@
 import React, { useEffect } from "react";
 import { useParams, useNavigate , useLocation } from "react-router-dom";
 import useMovieData from "../Hooks/useMovieData";
+import NotFound from "./NotFound";
 function Season() {
   const { movieID, season } = useParams();
-  // console.log(season)
+  console.log(movieID)
   const navigate = useNavigate();
   const data = useMovieData({ movieID, season });
-  console.log(data)
+  // console.log(data)
   const Episodes = data?.Episodes;
+  console.log(Episodes)
   const location = useLocation()
 
   useEffect(() => {
@@ -47,7 +49,7 @@ function Season() {
       </div>
       {data.Error && console.log(data[Error])}
     </div>
-  ) : null;
+  ) : <NotFound/>;
 }
 
 export default Season;

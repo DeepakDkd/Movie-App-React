@@ -6,8 +6,8 @@ import Loader from "./Loader";
 
 function MoviesField() {
   const { title, page } = useParams();
+  console.log(title)
   const data = useMovieData({ title, page });
-  console.log(data)
   let navigate = useNavigate();
   const location = useLocation()
 
@@ -36,7 +36,7 @@ function MoviesField() {
       <div className="moviesField">
         <p className="showingRes" id="focus">
           {data?.totalResults
-            ? `We've found ${data?.totalResults} results for "${data?.Search[0].Title}"`
+            ? `We've found ${data?.totalResults} results for "${title}"`
             : <NotFound title={title}/>}
         </p>
         <div className="movieResults">
