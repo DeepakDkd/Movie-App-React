@@ -23,12 +23,6 @@ function Footer() {
               alt=""
             />
           </a>
-          <a href="">
-            <img
-              src="https://www.iconpacks.net/icons/2/free-icon-youtube-logo-2431.png"
-              alt=""
-            />
-          </a>
         </div>
       </div>
       <div className="copyright">
